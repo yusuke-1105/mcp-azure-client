@@ -12,3 +12,6 @@ RUN apt-get update && \
     apt-get install -y curl gnupg && \
     apt-get install -y npm && \
     rm -rf /var/lib/apt/lists/*
+
+# Install azure-cli
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash

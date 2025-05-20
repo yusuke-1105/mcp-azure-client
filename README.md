@@ -1,6 +1,8 @@
+日本語版は[こちら](README-ja.md)をご覧ください。
+
 # MCP Azure Client
 
-A Python-based Model Context Protocol (MCP) client specifically designed to interact with Azure AI services. This application provides a convenient way to connect to Azure MCP servers and call available tools through an interactive command-line interface.
+A Python-based Model Context Protocol (MCP) client specifically designed to interact with Azure. This application provides a convenient way to connect to [Azure MCP servers](https://github.com/Azure/azure-mcp) and call available tools through an interactive command-line interface.
 
 ## Features
 
@@ -27,6 +29,11 @@ The application is containerized for ease of use and is best run using Docker Co
 1. From the project directory, start the service:
    ```bash
    docker compose up -d
+   ```
+   
+   After the service starts for the first time, enter the container and log in with Azure CLI:
+   ```bash
+   docker compose exec mcp-client az login
    ```
 
 2. This will build the container, start the application, and show the logs directly in your terminal.
